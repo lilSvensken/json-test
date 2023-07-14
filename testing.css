@@ -1,0 +1,73 @@
+button {
+  cursor: pointer;
+}
+
+.main-container {
+  margin: 20px;
+}
+
+.user-content__textarea {
+  width: 100%;
+  background-color: #ebebeb;
+}
+
+.user-content__btns-container {
+  margin-top: 10px;
+}
+
+.user-content__saved-list {
+  background-color: #fff6ef;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px dashed #000;
+}
+
+.user-content__saved-list.hide {
+  display: none;
+}
+
+.user-content__title {
+  margin-top: 0;
+}
+
+.user-content__saved-item {
+  display: inline-flex;
+  background-color: #f3e3cd;
+  margin-left: 6px;
+  padding: 0;
+}
+
+.user-content__saved-item:first-child {
+  margin-left: 0;
+}
+
+.user-content__saved-item-remove {
+  width: 20px;
+  margin-left: 10px;
+  height: 100%;
+  background-color: #f88b8b;
+  box-sizing: border-box;
+  display: block;
+}
+
+.user-content__btns-wrapper {
+  margin-top: 20px;
+  display: flex;
+}
+
+.user-content__btn {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.user-content__btn:first-child {
+  margin-left: 0;
+}
+
+.user-content__generate-btn {
+  margin-top: 20px;
+}
+
+.lib-content {
+  margin-top: 30px;
+}

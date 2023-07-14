@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script src="../../../form-generator/lib-to-connect/common.js"></script>
+  <script src="../../../form-generator/lib-to-connect/schema-form.umd.js"></script>
+  <!--  <script type="module" src="testing.js"></script>-->
+  <script type="module" src="js/main.js"></script>
+  <link rel="stylesheet" href="lib/style.css">
+  <link rel="stylesheet" href="./testing.css">
+</head>
+<body>
+<div class="main-container">
+  <div class="user-content">
+    <h2 class="user-content__title">
+      Вставьте свою JSON SCHEMA
+    </h2>
+
+    <textarea id="textarea" class="user-content__textarea" rows="10"></textarea>
+
+    <div class="user-content__btns-container">
+      <div id="saved-list" class="user-content__saved-list hide">
+        <h3 class="user-content__title">
+          Сохраненные схемы:
+        </h3>
+      </div>
+
+      <div class="user-content__btns-wrapper">
+        <button id="clear-all" type="button" disabled="" class="user-content__btn">
+          Очистить сохранения
+        </button>
+        <button id="btn-save" type="button" disabled="" class="user-content__btn">
+          Сохранить
+        </button>
+      </div>
+    </div>
+
+    <button id="btn-generate" type="button" class="user-content__generate-btn">
+      Сгенерировать
+    </button>
+  </div>
+
+  <div id="app" class="lib-content">
+  </div>
+</div>
+</body>
+</html>
