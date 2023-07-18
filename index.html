@@ -7,9 +7,9 @@
   <script src="lib/common.js"></script>
   <script src="lib/schema-form.umd.js"></script>
   <!--  <script type="module" src="testing.js"></script>-->
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="src/srcript.js"></script>
   <link rel="stylesheet" href="lib/style.css">
-  <link rel="stylesheet" href="./testing.css">
+  <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
 <div class="main-container">
@@ -42,7 +42,11 @@
     </button>
   </div>
 
-  <div id="app" class="lib-content">
+  <div id="form-json-ref" class="lib-content"></div>
+
+  <div id="form-general-container" class="hide">
+    <h2>Итоговая форма:</h2>
+    <div id="form-general"></div>
   </div>
 </div>
 </body>

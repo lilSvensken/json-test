@@ -1,15 +1,21 @@
 const LS_SAVED_ITEMS = "SVEN_SAVED_ITEMS";
 
-class Main {
+class Srcript {
 	textareaRef;
 	savedListRef;
 	btnClearAll;
 	savedItems = [];
+	formJsonRef;
+	formGeneralRef;
+	formGeneralContainerRef;
 	formData = {
 		lastname: "Шведчикова"
 	}
 
 	constructor() {
+		this.formJsonRef = document.getElementById("form-json-ref");
+		this.formGeneralRef = document.getElementById("form-general");
+		this.formGeneralContainerRef = document.getElementById("form-general-container");
 		this.textareaRef = document.getElementById("textarea");
 		this.btnClearAll = document.getElementById("clear-all");
 		this.savedListRef = document.getElementById("saved-list");
@@ -126,14 +132,21 @@ class Main {
 	}
 
 	onGenerate() {
-		const App = document.getElementById("app");
 		const json = JSON.parse(this.textareaRef.value);
 		const props = {
 			schema: json,
 			formData: this.formData
 		}
 
-		window.createSchemaForm(App, props);
+		createSchemaForm(this.formJsonRef, props);
+		document.addEventListener("onSubmit", ({detail}) => {
+			console.log(detail);
+			this.formGeneralContainerRef.classList.remove("hide");
+			this.formGeneralRef.innerText = JSON.stringify(detail);
+		});
+		document.addEventListener("onChangeForm", ({detail}) => {
+			console.log(detail)
+		});
 	}
 
 	onClear(item, itemRef) {
@@ -156,5 +169,5 @@ class Main {
 
 
 window.onload = () => {
-	new Main();
+	new Srcript();
 }
